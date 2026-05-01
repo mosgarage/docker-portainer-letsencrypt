@@ -2,7 +2,7 @@
 
 With this repo you will be able to set up the fantastic [Portainer](https://portainer.io) as a container over SSL auto generated and auto renewed by our Web Proxy.
 
-![Portainer Environment](https://github.com/mysmartspaces/images/blob/master/portainer.jpg)
+![Portainer Environment](https://github.com/mosgarage/images/blob/master/portainer.jpg)
 
 # Prerequisites
 
@@ -10,14 +10,14 @@ In order to use this compose file (docker-compose.yml) you must have:
 
 1. docker [https://docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)
 2. docker-compose [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
-3. docker-compose-letsencrypt-nginx-proxy-companion [https://github.com/mysmartspaces/docker-compose-letsencrypt-nginx-proxy-companion](https://github.com/mysmartspaces/docker-compose-letsencrypt-nginx-proxy-companion)
+3. docker-compose-letsencrypt-nginx-proxy-companion [https://github.com/mosgarage/docker-compose-letsencrypt-nginx-proxy-companion](https://github.com/mosgarage/docker-compose-letsencrypt-nginx-proxy-companion)
 
 # How to use
 
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/mysmartspaces/docker-portainer-letsencrypt.git
+git clone https://github.com/mosgarage/portainer-letsencrypt.git
 ```
 
 2. Make a copy of our .env.sample and rename it to .env:
@@ -26,10 +26,10 @@ Update this file with your preferences.
 
 ```bash
 #
-# docker-portainer-letsencrypt
+# portainer-letsencrypt
 # 
 # Portainer configured to work along with our Web Proxy
-# https://github.com/mysmartspaces/docker-compose-letsencrypt-nginx-proxy-companion
+# https://github.com/mosgarage/docker-compose-letsencrypt-nginx-proxy-companion
 #
 # This is the .env file to set up your portainer environment
 
@@ -72,7 +72,7 @@ PORTAINER_SSL_PATH=/path/to/your/certs
 #
 # SSL Certificates previously generated
 # You may use below webproxy to generate your ssl certificate
-#(https://github.com/mysmartspaces/docker-compose-letsencrypt-nginx-proxy-companion)
+#(https://github.com/mosgarage/docker-compose-letsencrypt-nginx-proxy-companion)
 #
 PORTAINER_SSL_CERTIFICATE=/certs/$MAIN_DOMAIN.crt
 PORTAINER_SSL_KEY=/certs/$MAIN_DOMAIN.key
@@ -81,7 +81,7 @@ PORTAINER_SSL_KEY=/certs/$MAIN_DOMAIN.key
 # Network name
 # 
 # Your container app must use a network conencted to your webproxy 
-# https://github.com/mysmartspaces/docker-compose-letsencrypt-nginx-proxy-companion
+# https://github.com/mosgarage/docker-compose-letsencrypt-nginx-proxy-companion
 #
 NETWORK=webproxy
 
